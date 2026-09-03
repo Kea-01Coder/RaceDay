@@ -66,12 +66,12 @@ CREATE TABLE Enrollments (
     payment_ref VARCHAR(100) NULL,
     amount_paid DECIMAL(10,2) DEFAULT 0,
     payment_date DATETIME NULL,
-    invoice_number NVARCHAR(50) UNIQUE NULL,
+    invoice_number VARCHAR(50) NULL,
     
     -- Participant details
     participant_name VARCHAR(255) NOT NULL,
     participant_user_id INT NULL FOREIGN KEY REFERENCES Users(user_id),
-    participant_id_number NVARCHAR(20) NOT NULL,
+    participant_id_number VARCHAR(20) NOT NULL,
     participant_dob DATE NULL,
     gender VARCHAR(10) NULL CHECK (gender IN ('male', 'female', 'other')),
     
