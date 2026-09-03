@@ -145,3 +145,16 @@ VALUES
 ('Comrades Marathon', 'The Ultimate Human Race - 90km between Pietermaritzburg and Durban. The world''s oldest and largest ultra marathon.', '2026-06-07 05:30:00', 'Pietermaritzburg to Durban', 20000, 1200.00, 850.00, '2026-03-31 23:59:00', 1),
 ('Two Oceans Marathon', '56km Ultra Marathon around the Cape Peninsula. Known as the world''s most beautiful marathon.', '2026-04-04 06:00:00', 'Cape Town', 12000, 1000.00, 750.00, '2026-02-28 23:59:00', 2),
 ('Soweto Marathon', 'Race through the streets of Soweto, celebrating South African heritage and community spirit.', '2026-11-01 05:45:00', 'Soweto, Johannesburg', 10000, 750.00, 550.00, '2026-08-31 23:59:00', 1);
+
+-- Insert Categories
+INSERT INTO Categories (event_id, name, description, entry_fee, start_time, distance_km, capacity)
+VALUES 
+-- Comrades Categories
+(1, 'Ultra Up', '90km up run from Durban to Pietermaritzburg', 1200.00, '05:30:00', 90.00, 10000),
+(1, 'Ultra Down', '90km down run from Pietermaritzburg to Durban', 1200.00, '05:30:00', 90.00, 10000),
+-- Two Oceans Categories
+(2, 'Ultra Marathon', '56km Ultra', 1000.00, '06:00:00', 56.00, 6000),
+(2, 'Half Marathon', '21.1km Half', 500.00, '06:30:00', 21.10, 6000),
+-- Soweto Categories
+(3, 'Full Marathon', '42.2km', 750.00, '05:45:00', 42.20, 5000),
+(3, '10km', '10km fun run', 300.00, '06:15:00', 10.00, 5000);
