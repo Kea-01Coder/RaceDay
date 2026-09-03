@@ -220,3 +220,20 @@ VALUES
 -- Zanele enrolled in Comrades Down (cancelled - refunded)
 (9, 1, 2, 'cancelled', 'refunded', 'card', 'PAY-COM-003', 850.00, '2026-01-10 08:00:00', 'INV-2026-008', 'Zanele Khumalo', 9, '9511125678087', '1995-11-12', 'female', 'Thandi Khumalo', '+27839997777', NULL, 'Senior');
 
+-- View all Users
+SELECT * FROM Users;
+
+-- View all Events
+SELECT * FROM Events;
+
+-- View all Categories
+SELECT * FROM Categories;
+
+-- View all Enrollments
+SELECT * FROM Enrollments;
+
+-- View all Results
+SELECT * FROM Results;
+
+-- View all WeatherInfo
+SELECT * FROM WeatherInfo;
