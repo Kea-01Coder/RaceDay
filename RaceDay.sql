@@ -193,3 +193,30 @@ VALUES
 (2, '2026-04-04', 20.0, 'Sunny, light wind', 10.0, 55.0),
 (3, '2026-11-01', 22.0, 'Clear skies', 12.0, 45.0);
 
+-- Insert an Admin user
+INSERT INTO Users (email, password_hash, first_name, last_name, role, phone, id_number)
+VALUES 
+('admin@raceday.co.za', 'hashed_password_admin', 'Admin', 'RaceDay', 'admin', '+27820000000', '8001011234081');
+
+-- Insert more participants
+INSERT INTO Users (email, password_hash, first_name, last_name, role, phone, id_number, date_of_birth)
+VALUES 
+('nomsa@email.com', 'hashed_password_7', 'Nomsa', 'Mthembu', 'participant', '+27833334444', '8803159876085', '1988-03-15'),
+('peter@email.com', 'hashed_password_8', 'Peter', 'Jacobs', 'participant', '+27838887777', '7505203456086', '1975-05-20'),
+('zanele@email.com', 'hashed_password_9', 'Zanele', 'Khumalo', 'participant', '+27839998888', '9511125678087', '1995-11-12');
+
+-- Insert more enrollments
+INSERT INTO Enrollments (
+    user_id, event_id, category_id, status, payment_status, payment_method,
+    payment_ref, amount_paid, payment_date, invoice_number,
+    participant_name, participant_user_id, participant_id_number, participant_dob, gender,
+    emergency_contact_name, emergency_contact_phone, bib_number, age_category
+)
+VALUES 
+-- Nomsa enrolled in Two Oceans Half (pending payment)
+(7, 2, 4, 'pending', 'pending', NULL, NULL, 0.00, NULL, 'INV-2026-006', 'Nomsa Mthembu', 7, '8803159876085', '1988-03-15', 'female', 'Sibusiso Mthembu', '+27834445555', NULL, 'Senior'),
+-- Peter enrolled in Soweto Full Marathon (paid)
+(8, 3, 5, 'confirmed', 'paid', 'zapper', 'PAY-SOW-001', 550.00, '2026-02-01 11:00:00', 'INV-2026-007', 'Peter Jacobs', 8, '7505203456086', '1975-05-20', 'male', 'Mary Jacobs', '+27838886666', 'S1001', 'Veteran'),
+-- Zanele enrolled in Comrades Down (cancelled - refunded)
+(9, 1, 2, 'cancelled', 'refunded', 'card', 'PAY-COM-003', 850.00, '2026-01-10 08:00:00', 'INV-2026-008', 'Zanele Khumalo', 9, '9511125678087', '1995-11-12', 'female', 'Thandi Khumalo', '+27839997777', NULL, 'Senior');
+
