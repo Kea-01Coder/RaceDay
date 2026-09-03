@@ -178,3 +178,18 @@ VALUES
 -- Johannes enrolled in Comrades Down (paid)
 (6, 1, 2, 'confirmed', 'paid', 'card', 'PAY-COM-002', 850.00, '2026-01-25 16:45:00', 'INV-2026-005', 'Johannes Smit', 6, '7802123456084', '1978-02-12', 'male', 'Martha Smit', '+27836667777', 'C1002', 'Veteran');
 
+-- Insert Results
+INSERT INTO Results (enrollment_id, finish_time, position, overall_rank, category_rank, certified, certificate_url)
+VALUES 
+(1, '09:45:30', 1250, 1250, 50, 1, '/certificates/C1001.pdf'),
+(2, '02:15:45', 340, 340, 12, 1, '/certificates/T2001.pdf'),
+(4, '07:30:00', 2200, 2200, 85, 1, '/certificates/T2002.pdf'),
+(5, '10:32:15', 2560, 2560, 120, 1, '/certificates/C1002.pdf');
+
+-- Insert WeatherInfo
+INSERT INTO WeatherInfo (event_id, forecast_date, temperature, conditions, wind_speed, humidity)
+VALUES 
+(1, '2026-06-07', 18.5, 'Partly cloudy, mild', 15.0, 65.0),
+(2, '2026-04-04', 20.0, 'Sunny, light wind', 10.0, 55.0),
+(3, '2026-11-01', 22.0, 'Clear skies', 12.0, 45.0);
+
