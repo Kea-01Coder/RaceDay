@@ -128,4 +128,20 @@ CREATE TABLE WeatherInfo (
 INSERT INTO Users (email, password_hash, first_name, last_name, role, phone, id_number)
 VALUES 
 ('sandra@comrades.co.za', 'hashed_password_1', 'Sandra', 'Mkhize', 'organiser', '+27821234567', '7501011234081'),
-('michael@twooceans.co.za', 'hashed_password_2', 'Michael', 'van der Merwe', 'organiser', '+27829876543', '8005155678082');
+('michael@twooceans.co.za', 'hashed_password_2', 'Michael', 'van der Merwe', 'organiser', '+27829876543', '8005155678082'
+);
+
+-- Insert Participants
+INSERT INTO Users (email, password_hash, first_name, last_name, role, phone, id_number, date_of_birth)
+VALUES 
+('thabo@email.com', 'hashed_password_3', 'Thabo', 'Ndlovu', 'participant', '+27831234567', '9001011234081', '1990-01-01'),
+('linda@email.com', 'hashed_password_4', 'Linda', 'Botha', 'participant', '+27837654321', '8505155678082', '1985-05-15'),
+('sipho@email.com', 'hashed_password_5', 'Sipho', 'Zulu', 'participant', '+27835551111', '9208089876083', '1992-08-08'),
+('johannes@email.com', 'hashed_password_6', 'Johannes', 'Smit', 'participant', '+27834442222', '7802123456084', '1978-02-12');
+
+-- Insert Events
+INSERT INTO Events (title, description, date_time, location, max_participants, entry_fee, early_bird_fee, early_bird_date, created_by)
+VALUES 
+('Comrades Marathon', 'The Ultimate Human Race - 90km between Pietermaritzburg and Durban. The world''s oldest and largest ultra marathon.', '2026-06-07 05:30:00', 'Pietermaritzburg to Durban', 20000, 1200.00, 850.00, '2026-03-31 23:59:00', 1),
+('Two Oceans Marathon', '56km Ultra Marathon around the Cape Peninsula. Known as the world''s most beautiful marathon.', '2026-04-04 06:00:00', 'Cape Town', 12000, 1000.00, 750.00, '2026-02-28 23:59:00', 2),
+('Soweto Marathon', 'Race through the streets of Soweto, celebrating South African heritage and community spirit.', '2026-11-01 05:45:00', 'Soweto, Johannesburg', 10000, 750.00, 550.00, '2026-08-31 23:59:00', 1);
