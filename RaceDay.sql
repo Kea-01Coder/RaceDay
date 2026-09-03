@@ -119,3 +119,13 @@ CREATE TABLE WeatherInfo (
     humidity DECIMAL(5,2) NULL,
     updated_at DATETIME DEFAULT GETDATE()
 );
+
+-- ============================================
+-- SEED DATA
+-- ============================================
+
+-- Insert Organisers
+INSERT INTO Users (email, password_hash, first_name, last_name, role, phone, id_number)
+VALUES 
+('sandra@comrades.co.za', 'hashed_password_1', 'Sandra', 'Mkhize', 'organiser', '+27821234567', '7501011234081'),
+('michael@twooceans.co.za', 'hashed_password_2', 'Michael', 'van der Merwe', 'organiser', '+27829876543', '8005155678082');
