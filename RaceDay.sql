@@ -158,3 +158,23 @@ VALUES
 -- Soweto Categories
 (3, 'Full Marathon', '42.2km', 750.00, '05:45:00', 42.20, 5000),
 (3, '10km', '10km fun run', 300.00, '06:15:00', 10.00, 5000);
+
+-- Insert Enrollments
+INSERT INTO Enrollments (
+    user_id, event_id, category_id, status, payment_status, payment_method, 
+    payment_ref, amount_paid, payment_date, invoice_number,
+    participant_name, participant_user_id, participant_id_number, participant_dob, gender,
+    emergency_contact_name, emergency_contact_phone, bib_number, age_category
+)
+VALUES 
+-- Thabo enrolled in Comrades Up (paid)
+(3, 1, 1, 'confirmed', 'paid', 'card', 'PAY-COM-001', 850.00, '2026-01-15 10:30:00', 'INV-2026-001', 'Thabo Ndlovu', 3, '9001011234081', '1990-01-01', 'male', 'Sandra Ndlovu', '+27835556666', 'C1001', 'Senior'),
+-- Linda enrolled in Two Oceans Half (paid)
+(4, 2, 4, 'confirmed', 'paid', 'eft', 'PAY-TWO-001', 500.00, '2026-01-20 14:15:00', 'INV-2026-002', 'Linda Botha', 4, '8505155678082', '1985-05-15', 'female', 'Pieter Botha', '+27837778888', 'T2001', 'Senior'),
+-- Sipho enrolled in Soweto 10km (pending payment)
+(5, 3, 6, 'pending', 'pending', NULL, NULL, 0.00, NULL, 'INV-2026-003', 'Sipho Zulu', 5, '9208089876083', '1992-08-08', 'male', 'Nomsa Zulu', '+27835559999', NULL, 'Senior'),
+-- Thabo enrolled in Two Oceans Ultra (paid)
+(3, 2, 3, 'confirmed', 'paid', 'snapscan', 'PAY-TWO-002', 750.00, '2026-01-22 09:00:00', 'INV-2026-004', 'Thabo Ndlovu', 3, '9001011234081', '1990-01-01', 'male', 'Sandra Ndlovu', '+27835556666', 'T2002', 'Senior'),
+-- Johannes enrolled in Comrades Down (paid)
+(6, 1, 2, 'confirmed', 'paid', 'card', 'PAY-COM-002', 850.00, '2026-01-25 16:45:00', 'INV-2026-005', 'Johannes Smit', 6, '7802123456084', '1978-02-12', 'male', 'Martha Smit', '+27836667777', 'C1002', 'Veteran');
+
