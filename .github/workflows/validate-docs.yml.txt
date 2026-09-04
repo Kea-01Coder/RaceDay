@@ -1,0 +1,119 @@
+name: Validate Documentation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Check /docs folder exists
+        run: |
+          if [ -d "docs" ]; then
+            echo " /docs folder exists"
+          else
+            echo " /docs folder not found!"
+            exit 1
+          fi
+      
+      - name: Check ERD file exists
+        run: |
+          if ls docs/*.png docs/*.pdf 2>/dev/null | grep -q .; then
+            echo " ERD file found"
+            ls docs/*.png docs/*.pdf 2>/dev/null
+          else
+            echo " No ERD file found in /docs folder"
+            exit 1
+          fi
+      
+      - name: Check API Endpoint Plan exists
+        run: |
+          if ls docs/*.md docs/*.pdf 2>/dev/null | grep -E "endpoint|api" -i | grep -q .; then
+            echo " API Endpoint Plan found"
+            ls docs/*.md docs/*.pdf 2>/dev/null | grep -E "endpoint|api" -i
+          else
+            echo " No API Endpoint Plan found in /docs folder"
+            exit 1
+          fi
+      
+      - name: Check SQL script exists
+        run: |
+          if ls docs/*.sql 2>/dev/null | grep -q .; then
+            echo " SQL script found"
+            ls docs/*.sql
+          else
+            echo " No SQL script found in /docs folder"
+            exit 1
+          fi
+      
+      - name: Validate SQL file
+        run: |
+          SQL_FILE=$(ls docs/*.sql 2>/dev/null | head -1)
+          if [ -f "$SQL_FILE" ]; then
+            echo "Checking SQL file: $SQL_FILE"
+            
+            # Count tables
+            TABLE_COUNT=$(grep -c "CREATE TABLE" "$SQL_FILE" || echo "0")
+            echo "Found $TABLE_COUNT CREATE TABLE statements"
+            
+            # Count foreign keys
+            FK_COUNT=$(grep -c "FOREIGN KEY" "$SQL_FILE" || echo "0")
+            echo "Found $FK_COUNT FOREIGN KEY definitions"
+            
+            # Count INSERT statements
+            INSERT_COUNT=$(grep -c "INSERT INTO" "$SQL_FILE" || echo "0")
+            echo "Found $INSERT_COUNT INSERT statements"
+            
+            if [ $TABLE_COUNT -lt 6 ]; then
+              echo "Expected at least 6 tables, found $TABLE_COUNT"
+              exit 1
+            fi
+            
+            echo "SQL validation passed"
+          else
+            echo "No SQL file found"
+            exit 1
+          fi
+      
+      - name: Check commit count
+        run: |
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+          echo "Total commits: $COMMIT_COUNT"
+          
+          if [ $COMMIT_COUNT -lt 20 ]; then
+            echo "Only $COMMIT_COUNT commits. Minimum required is 20."
+          else
+            echo "$COMMIT_COUNT commits - meets minimum requirement of 20"
+          fi
+      
+      - name: List all files in docs
+        run: |
+          echo "Contents of /docs folder:"
+          ls -la docs/
+      
+      - name: Final validation summary
+        run: |
+          echo "========================================"
+          echo "Validation Complete"
+          echo "========================================"
+          echo ""
+          echo "Summary:"
+          echo "  /docs folder: Exists"
+          echo "  ERD file: Found"
+          echo "  API Plan: Found"
+          echo "  SQL Script: Found"
+          echo "  SQL Tables: Validated"
+          echo "  Commits: Checked"
+          echo ""
+          echo "All required documents are present!"
+          echo "========================================"
