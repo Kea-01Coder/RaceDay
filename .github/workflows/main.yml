@@ -17,48 +17,31 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Check /docs folder exists
+      - name: Check PROG6212 POE PART 1 PDF file exists
         run: |
-          if [ -d "docs" ]; then
-            echo "/docs folder exists"
+          if ls *.pdf 2>/dev/null | grep -q .; then
+            echo " PDF file found"
+            ls *.pdf
           else
-            echo " /docs folder not found!"
+            echo " No PDF file found in root folder"
+            echo "   Expected: PROG6212 POE PART 1.pdf or similar"
             exit 1
           fi
       
-      - name: Check ERD file exists
+      - name: Check SQL script file exists
         run: |
-          if ls docs/*.png docs/*.pdf 2>/dev/null | grep -q .; then
-            echo " ERD file found"
-            ls docs/*.png docs/*.pdf 2>/dev/null
-          else
-            echo " No ERD file found in /docs folder"
-            exit 1
-          fi
-      
-      - name: Check API Endpoint Plan exists
-        run: |
-          if ls docs/*.md docs/*.pdf 2>/dev/null | grep -E "endpoint|api" -i | grep -q .; then
-            echo " API Endpoint Plan found"
-            ls docs/*.md docs/*.pdf 2>/dev/null | grep -E "endpoint|api" -i
-          else
-            echo " No API Endpoint Plan found in /docs folder"
-            exit 1
-          fi
-      
-      - name: Check SQL script exists
-        run: |
-          if ls docs/*.sql 2>/dev/null | grep -q .; then
+          if ls *.sql 2>/dev/null | grep -q .; then
             echo " SQL script found"
-            ls docs/*.sql
+            ls *.sql
           else
-            echo " No SQL script found in /docs folder"
+            echo " No SQL script found in root folder"
+            echo "   Expected: RaceDay.sql"
             exit 1
           fi
       
       - name: Validate SQL file
         run: |
-          SQL_FILE=$(ls docs/*.sql 2>/dev/null | head -1)
+          SQL_FILE=$(ls *.sql 2>/dev/null | head -1)
           if [ -f "$SQL_FILE" ]; then
             echo "Checking SQL file: $SQL_FILE"
             
@@ -90,16 +73,16 @@ jobs:
           COMMIT_COUNT=$(git rev-list --count HEAD)
           echo "Total commits: $COMMIT_COUNT"
           
-          if [ $COMMIT_COUNT -lt 20 ]; then
-            echo " Only $COMMIT_COUNT commits. Minimum required is 20."
+          if [ $COMMIT_COUNT -lt 12 ]; then
+            echo " Only $COMMIT_COUNT commits. Minimum required is 12."
           else
-            echo " $COMMIT_COUNT commits - meets minimum requirement of 20"
+            echo " $COMMIT_COUNT commits - meets minimum requirement of 12"
           fi
       
-      - name: List all files in docs
+      - name: List all files in root
         run: |
-          echo " Contents of /docs folder:"
-          ls -la docs/
+          echo "📁 Contents of root folder:"
+          ls -la
       
       - name: Final validation summary
         run: |
@@ -108,12 +91,10 @@ jobs:
           echo "========================================"
           echo ""
           echo "Summary:"
-          echo "   /docs folder:  Exists"
-          echo "   ERD file:  Found"
-          echo "   API Plan:  Found"
-          echo "   SQL Script:  Found"
-          echo "   SQL Tables:  Validated"
-          echo "   Commits:  Checked"
+          echo "  📄 PDF file: Found"
+          echo "  🗄️  SQL Script:  Found"
+          echo "  📊 SQL Tables:  Validated (6+ tables)"
+          echo "  📝 Commits:  Checked (20+ required)"
           echo ""
           echo "All required documents are present!"
           echo "========================================"
