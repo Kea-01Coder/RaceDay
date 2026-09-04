@@ -107,6 +107,8 @@ All endpoints are prefixed with `/api/v1`. Authentication is handled via JWT tok
  Users
  Events
  WeatherInfo    
+ Category
+ Enrolment
+ Results
  
-
 
