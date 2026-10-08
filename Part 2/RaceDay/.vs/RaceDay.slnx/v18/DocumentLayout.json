@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Student\\source\\repos\\RaceDay\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\models\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\models\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\raceday.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\raceday.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|c:\\users\\student\\source\\repos\\raceday\\raceday\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2FCF9A-8A85-497A-733E-631B3DB717BF}|RaceDay\\RaceDay.csproj|solutionrelative:raceday\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\WeatherInfo.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\WeatherInfo.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\WeatherInfo.cs",
+              "RelativeToolTip": "RaceDay\\Models\\WeatherInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T17:01:01.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\appsettings.json",
+              "RelativeDocumentMoniker": "RaceDay\\appsettings.json",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\appsettings.json",
+              "RelativeToolTip": "RaceDay\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-08T16:51:43.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\Result.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Result.cs",
+              "RelativeToolTip": "RaceDay\\Models\\Result.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA1wBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T16:46:37.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Enrollment.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\Enrollment.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Enrollment.cs",
+              "RelativeToolTip": "RaceDay\\Models\\Enrollment.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T16:35:00.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Category.cs",
+              "RelativeToolTip": "RaceDay\\Models\\Category.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T16:14:39.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\Event.cs",
+              "RelativeToolTip": "RaceDay\\Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T16:09:36.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\User.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Models\\User.cs",
+              "RelativeToolTip": "RaceDay\\Models\\User.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T15:44:36.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RaceDay.http",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\RaceDay.http",
+              "RelativeDocumentMoniker": "RaceDay\\RaceDay.http",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\RaceDay.http",
+              "RelativeToolTip": "RaceDay\\RaceDay.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-10-08T15:57:49.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "RaceDay\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\WeatherForecast.cs",
+              "RelativeToolTip": "RaceDay\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T15:57:15.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Program.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Program.cs",
+              "ToolTip": "C:\\Users\\Student\\source\\repos\\RaceDay\\RaceDay\\Program.cs",
+              "RelativeToolTip": "RaceDay\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T15:31:55.852Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
