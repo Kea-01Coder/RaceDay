@@ -1,5 +1,5 @@
 # RaceDay - Event Management System
-
+## Part 1
 ## Project Overview
 
 RaceDay is a full-stack web-based event management system designed specifically for the South African road running, walking, and cycling community. The platform allows Event Organisers to create and manage events, categories, and participant results, while Participants can browse upcoming events, enter events, track their personal performance history, and prepare for race day using live weather and route information.
@@ -111,4 +111,8 @@ All endpoints are prefixed with `/api/v1`. Authentication is handled via JWT tok
  Enrolment
  Results
  
-
+## Part 2
+Date Started : 08 October 2026
+I started the API project
+I first added a model folder and added all the 6 tables into classes and added each and every variable from the sql 
+script table 
