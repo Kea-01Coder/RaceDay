@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using RaceDay.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+builder.Services.AddDbContext<RaceDayDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
