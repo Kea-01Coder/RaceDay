@@ -15,9 +15,31 @@ namespace RaceDay.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            //modelBuilder for User entity
             modelBuilder.Entity<User>()
-            .ToTable(t=>t.HasCheckConstraint("CK_User_Role", "[Role] IN ('Organiser', 'Participant')"));
+            .ToTable(t=>t.HasCheckConstraint("CK_User_Role", "[Role] IN ('Organiser', 'Participant','Admin')"));
 
+            modelBuilder.Entity<User>()
+            .Property(u => u.CreatedAt)
+            .HasDefaultValueSql("GETDATE()"); // Set default value for CreatedAt
+
+            modelBuilder.Entity<User>()
+            .Property(u => u.UpdatedAt)
+            .HasDefaultValueSql("GETDATE()"); // Set default value for UpdatedAt
+
+            //modelBuilder for Event entity
+            modelBuilder.Entity<Event>()
+            .Property(e=>e.EntryFee)
+            .HasPrecision(10, 2); // Set precision for EntryFee
+
+            modelBuilder.Entity<Event>()
+            .Property(e => e.EarlyBirdFee)
+            .HasPrecision(10, 2); // Set precision for EarlyBirdFee
+
+            modelBuilder.Entity<Event>()
+            .ToTable(t=>t.HasCheckConstraint("CK_Event_Status", "[Status] IN ('upcoming', 'ongoing', 'completed', 'cancelled')"));
+
+            //modelBuilder for Category entity
             modelBuilder.Entity<Category>()
             .HasOne(c => c.Event)        // Category has one Event
             .WithMany(e => e.Categories) // Event has many Categories
@@ -35,6 +57,10 @@ namespace RaceDay.Data
             modelBuilder.Entity<Category>()
             .Property(c => c.CreatedAt)
             .HasDefaultValueSql("GETDATE()"); // Set default value for CreatedAt
+
+            modelBuilder.Entity<Category>()
+            .Property(c => c.StartTime)
+            .HasDefaultValueSql();
         }
         
         public DbSet<User> Users { get; set; }
