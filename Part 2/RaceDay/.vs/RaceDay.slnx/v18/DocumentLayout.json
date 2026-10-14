@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "RaceDay\\Data\\RaceDayDbContext.cs",
               "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Data\\RaceDayDbContext.cs",
               "RelativeToolTip": "RaceDay\\Data\\RaceDayDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAqwCcAAAB9AAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowCAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-10T13:32:44.717Z",
               "EditorCaption": ""
@@ -155,8 +155,7 @@
               "RelativeToolTip": "RaceDay\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T16:14:39.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-08T16:14:39.682Z"
             },
             {
               "$type": "Document",
@@ -181,8 +180,7 @@
               "RelativeToolTip": "RaceDay\\Models\\User.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T15:44:36.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-08T15:44:36.345Z"
             },
             {
               "$type": "Document",

@@ -29,6 +29,11 @@ namespace RaceDay.Data
 
             //modelBuilder for Event entity
             modelBuilder.Entity<Event>()
+            .HasOne(c => c.User)        // Category has one Event
+            .WithMany(e => e.Events) // Event has many Categories
+            .HasForeignKey(c => c.CreatedBy);
+
+            modelBuilder.Entity<Event>()
             .Property(e=>e.EntryFee)
             .HasPrecision(10, 2); // Set precision for EntryFee
 
@@ -38,6 +43,18 @@ namespace RaceDay.Data
 
             modelBuilder.Entity<Event>()
             .ToTable(t=>t.HasCheckConstraint("CK_Event_Status", "[Status] IN ('upcoming', 'ongoing', 'completed', 'cancelled')"));
+
+            modelBuilder.Entity<Event>()
+            .Property(e=>e.Status)
+            .HasDefaultValue("upcoming"); // Set default value for Status
+
+            modelBuilder.Entity<Event>()
+            .Property(e => e.CreatedAt)
+            .HasDefaultValueSql("GETDATE()"); // Set default value for CreatedAt
+
+            modelBuilder.Entity<Event>()
+            .Property(e => e.UpdatedAt)
+            .HasDefaultValueSql("GETDATE()"); // Set default value for UpdatedAt
 
             //modelBuilder for Category entity
             modelBuilder.Entity<Category>()
@@ -57,10 +74,6 @@ namespace RaceDay.Data
             modelBuilder.Entity<Category>()
             .Property(c => c.CreatedAt)
             .HasDefaultValueSql("GETDATE()"); // Set default value for CreatedAt
-
-            modelBuilder.Entity<Category>()
-            .Property(c => c.StartTime)
-            .HasDefaultValueSql();
         }
         
         public DbSet<User> Users { get; set; }
