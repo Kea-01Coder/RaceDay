@@ -18,7 +18,6 @@
 
         //Participant details
         public string ParticipantName { get; set; }
-        public int? ParticipantUserId { get; set; }
         public string ParticipantIdNumber { get; set; }
         public DateOnly? ParticipantDob { get; set; }
         public string? Gender { get; set; }
@@ -43,6 +42,8 @@
 
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        
+
+        public ICollection<Result> Results { get; set; }
+
     }
 }

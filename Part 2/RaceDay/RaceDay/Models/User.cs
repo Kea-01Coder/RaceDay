@@ -16,14 +16,17 @@ namespace RaceDay.Models
 
         public string Role { get; set; }
 
-        public int? Phone { get; set; } //Nullable
+        public string? Phone { get; set; } //Nullable
 
-        public int? IDNumber { get; set; }  //Nullable
+        public string? IDNumber { get; set; }  //Nullable
 
-        public int? DateOfBirth { get; set; }   //Nullable
+        public DateTime? DateOfBirth { get; set; }   //Nullable
 
         public DateTime? CreatedAt { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
+
+        public ICollection<Event> Events { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
     }
 }
