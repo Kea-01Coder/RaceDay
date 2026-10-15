@@ -402,13 +402,13 @@ namespace RaceDay.Migrations
                     b.HasOne("RaceDay.Models.Event", "Event")
                         .WithMany("Enrollments")
                         .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("RaceDay.Models.User", "User")
                         .WithMany("Enrollments")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
