@@ -10,11 +10,11 @@ namespace RaceDay.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EventController : ControllerBase
+    public class EventsController : ControllerBase
     {
         private readonly RaceDayDbContext _context;
 
-        public EventController(RaceDayDbContext context)
+        public EventsController(RaceDayDbContext context)
         {
             _context = context;
         }

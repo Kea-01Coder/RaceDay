@@ -5,7 +5,7 @@ namespace RaceDay.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ResultController : ControllerBase
+    public class UsersController : ControllerBase
     {
     }
 }
