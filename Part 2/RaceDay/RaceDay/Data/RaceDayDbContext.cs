@@ -79,17 +79,20 @@ namespace RaceDay.Data
             modelBuilder.Entity<Enrollment>()
              .HasOne(e => e.Category)        // Enrollment has one Category
              .WithMany(c => c.Enrollments) // Category has many Enrollments
-             .HasForeignKey(e => e.CategoryId);
+             .HasForeignKey(e => e.CategoryId)
+             .OnDelete(DeleteBehavior.Cascade); // This creates ON DELETE CASCADE
 
             modelBuilder.Entity<Enrollment>()
              .HasOne(u => u.User)        // Category has one Event
              .WithMany(e => e.Enrollments) // Event has many Enrollments
-             .HasForeignKey(u => u.UserId);
+             .HasForeignKey(u => u.UserId)
+             .OnDelete(DeleteBehavior.Restrict); // This creates ON DELETE CASCADE
 
             modelBuilder.Entity<Enrollment>()
             .HasOne(e => e.Event)        // Category has one Event
             .WithMany(ev => ev.Enrollments) // Event has many Enrollments
-            .HasForeignKey(ev => ev.EventId);
+            .HasForeignKey(ev => ev.EventId)
+            .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Enrollment>()
             .ToTable(t=> t.HasCheckConstraint("CK_Enrollment_Status", "[Status] IN ('pending', 'confirmed', 'cancelled', 'completed', 'DNS', 'DNF')"));
@@ -127,7 +130,7 @@ namespace RaceDay.Data
             //modelBuilder for Result entity
             modelBuilder.Entity<Result>()
             .HasOne(r => r.Enrollment)        // Result has one Enrollment      
-            .WithMany()
+            .WithMany(en=>en.Results)
             .HasForeignKey(r => r.EnrollmentId);
 
             modelBuilder.Entity<Result>()

@@ -166,3 +166,4 @@ C:\Users\Student\Documents\GitHub\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10
 C:\Users\Student\Documents\GitHub\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10.0\RaceDay.pdb
 C:\Users\Student\Documents\GitHub\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10.0\RaceDay.genruntimeconfig.cache
 C:\Users\Student\Documents\GitHub\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10.0\ref\RaceDay.dll
+C:\Users\Student\Documents\GitHub\RaceDay\Part 2\RaceDay\RaceDay\bin\Debug\net10.0\BCrypt-Net-Next.dll

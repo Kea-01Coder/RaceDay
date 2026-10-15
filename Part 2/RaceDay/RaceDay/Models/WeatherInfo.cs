@@ -2,7 +2,7 @@
 {
     public class WeatherInfo
     {
-        public int WeatherId { get; set; } //Primary Key
+        public int WeatherInfoId { get; set; } //Primary Key
         public DateOnly ForecastDate { get; set; }
         public decimal? Temperature { get; set; }
         public string? Conditions { get; set; }
