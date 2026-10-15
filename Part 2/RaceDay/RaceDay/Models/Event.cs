@@ -22,5 +22,6 @@ namespace RaceDay.Models
         public User User { get; set; }
         public ICollection<Category> Categories { get; set; }
         public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<WeatherInfo> WeatherInfos { get; set; }
     }
 }

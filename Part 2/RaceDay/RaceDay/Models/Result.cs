@@ -7,7 +7,7 @@
         public int Position { get; set; }
         public int OverallRank { get; set; }
         public int CategoryRank { get; set; }
-        public bool? Certified { get; set; } = false;
+        public bool? Certified { get; set; }
         public string? CertificateUrl { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
