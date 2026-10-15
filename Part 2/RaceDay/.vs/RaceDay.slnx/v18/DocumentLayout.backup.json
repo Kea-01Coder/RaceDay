@@ -86,21 +86,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Enrollment.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Models\\Enrollment.cs",
-              "RelativeDocumentMoniker": "RaceDay\\Models\\Enrollment.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Models\\Enrollment.cs",
-              "RelativeToolTip": "RaceDay\\Models\\Enrollment.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-08T16:35:00.703Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -146,11 +133,24 @@
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Controllers\\EventController.cs",
               "RelativeDocumentMoniker": "RaceDay\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Controllers\\EventController.cs*",
-              "RelativeToolTip": "RaceDay\\Controllers\\EventController.cs*",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Controllers\\EventController.cs",
+              "RelativeToolTip": "RaceDay\\Controllers\\EventController.cs",
               "ViewState": "AgIAAPsAAAAAAAAAAAAmwPkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T06:27:52.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Models\\Enrollment.cs",
+              "RelativeDocumentMoniker": "RaceDay\\Models\\Enrollment.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\RaceDay\\Part 2\\RaceDay\\RaceDay\\Models\\Enrollment.cs",
+              "RelativeToolTip": "RaceDay\\Models\\Enrollment.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T16:35:00.703Z",
               "EditorCaption": ""
             },
             {

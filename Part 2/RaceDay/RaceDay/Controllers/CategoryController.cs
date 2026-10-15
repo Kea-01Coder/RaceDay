@@ -7,5 +7,6 @@ namespace RaceDay.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+
     }
 }
