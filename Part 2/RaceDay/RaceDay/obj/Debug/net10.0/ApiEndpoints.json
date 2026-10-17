@@ -32,9 +32,120 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.CategoriesController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "RaceDay.Models.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.CategoriesController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.EnrollmentsController",
+    "Method": "GetEnrollment",
+    "RelativePath": "api/Enrollments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.EnrollmentsController",
+    "Method": "UpdateEnrollment",
+    "RelativePath": "api/Enrollments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "RaceDay.Models.Enrollment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.EnrollmentsController",
+    "Method": "CancelEnrollment",
+    "RelativePath": "api/Enrollments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.EnrollmentsController",
+    "Method": "ProcessPayment",
+    "RelativePath": "api/Enrollments/{id}/pay",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "RaceDay.Controllers.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "GetEvents",
-    "RelativePath": "api/Event",
+    "RelativePath": "api/Events",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -53,9 +164,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "CreateEvent",
-    "RelativePath": "api/Event",
+    "RelativePath": "api/Events",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -69,9 +180,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "GetEvent",
-    "RelativePath": "api/Event/{id}",
+    "RelativePath": "api/Events/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -85,9 +196,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "UpdateEvent",
-    "RelativePath": "api/Event/{id}",
+    "RelativePath": "api/Events/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -106,9 +217,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "DeleteEvent",
-    "RelativePath": "api/Event/{id}",
+    "RelativePath": "api/Events/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -122,9 +233,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "AddCategory",
-    "RelativePath": "api/Event/{id}/categories",
+    "RelativePath": "api/Events/{id}/categories",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -143,9 +254,30 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EnrollmentsController",
+    "Method": "EnrollInEvent",
+    "RelativePath": "api/events/{id}/enrol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "enrolment",
+        "Type": "RaceDay.Models.Enrollment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "GetEventParticipants",
-    "RelativePath": "api/Event/{id}/participants",
+    "RelativePath": "api/Events/{id}/participants",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -159,9 +291,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "GetEventResults",
-    "RelativePath": "api/Event/{id}/results",
+    "RelativePath": "api/Events/{id}/results",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -180,9 +312,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "SubmitResults",
-    "RelativePath": "api/Event/{id}/results",
+    "RelativePath": "api/Events/{id}/results",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -201,9 +333,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "GetEventWeather",
-    "RelativePath": "api/Event/{id}/weather",
+    "RelativePath": "api/Events/{id}/weather",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -217,9 +349,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RaceDay.Controllers.EventController",
+    "ContainingType": "RaceDay.Controllers.EventsController",
     "Method": "UpsertWeather",
-    "RelativePath": "api/Event/{id}/weather",
+    "RelativePath": "api/Events/{id}/weather",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -232,6 +364,117 @@
       {
         "Name": "weather",
         "Type": "RaceDay.Models.WeatherInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.ResultsController",
+    "Method": "GetResult",
+    "RelativePath": "api/Results/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.ResultsController",
+    "Method": "UpdateResult",
+    "RelativePath": "api/Results/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updated",
+        "Type": "RaceDay.Models.Result",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.ResultsController",
+    "Method": "DeleteResult",
+    "RelativePath": "api/Results/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "GetUserEnrollments",
+    "RelativePath": "api/Users/{id}/enrollments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "GetUserResults",
+    "RelativePath": "api/Users/{id}/results",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "GetMyProfile",
+    "RelativePath": "api/Users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RaceDay.Controllers.UsersController",
+    "Method": "UpdateMyProfile",
+    "RelativePath": "api/Users/me",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RaceDay.Controllers.UpdateProfileRequest",
         "IsRequired": true
       }
     ],

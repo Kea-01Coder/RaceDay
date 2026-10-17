@@ -77,10 +77,273 @@
         }
       }
     },
-    "/api/Event": {
+    "/api/Categories/{id}": {
+      "put": {
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Categories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/events/{id}/enrol": {
+      "post": {
+        "tags": [
+          "Enrollments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Enrollment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Enrollment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Enrollment"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Enrollments/{id}": {
       "get": {
         "tags": [
-          "Event"
+          "Enrollments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Enrollments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Enrollment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Enrollment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Enrollment"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Enrollments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Enrollments/{id}/pay": {
+      "post": {
+        "tags": [
+          "Enrollments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Events": {
+      "get": {
+        "tags": [
+          "Events"
         ],
         "parameters": [
           {
@@ -106,7 +369,7 @@
       },
       "post": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "requestBody": {
           "content": {
@@ -135,10 +398,10 @@
         }
       }
     },
-    "/api/Event/{id}": {
+    "/api/Events/{id}": {
       "get": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -163,7 +426,7 @@
       },
       "put": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -208,7 +471,7 @@
       },
       "delete": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -232,10 +495,10 @@
         }
       }
     },
-    "/api/Event/{id}/participants": {
+    "/api/Events/{id}/participants": {
       "get": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -259,10 +522,10 @@
         }
       }
     },
-    "/api/Event/{id}/results": {
+    "/api/Events/{id}/results": {
       "get": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -299,7 +562,7 @@
       },
       "post": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -352,10 +615,10 @@
         }
       }
     },
-    "/api/Event/{id}/weather": {
+    "/api/Events/{id}/weather": {
       "get": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -380,7 +643,7 @@
       },
       "post": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -424,10 +687,10 @@
         }
       }
     },
-    "/api/Event/{id}/categories": {
+    "/api/Events/{id}/categories": {
       "post": {
         "tags": [
-          "Event"
+          "Events"
         ],
         "parameters": [
           {
@@ -464,6 +727,199 @@
           },
           "required": true
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Results/{id}": {
+      "get": {
+        "tags": [
+          "Results"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Results"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Result"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Result"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Result"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Results"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/me": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}/enrollments": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/{id}/results": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -591,174 +1047,7 @@
           }
         }
       },
-      "Enrollment": {
-        "type": "object",
-        "properties": {
-          "enrollmentId": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "status": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "entryDate": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
-          },
-          "paymentStatus": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "paymentMethod": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "paymentRef": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "amountPaid": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "null",
-              "number",
-              "string"
-            ],
-            "format": "double"
-          },
-          "paymentDate": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
-          },
-          "invoiceNumber": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "participantName": {
-            "type": "string"
-          },
-          "participantIdNumber": {
-            "type": "string"
-          },
-          "participantDob": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date"
-          },
-          "gender": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "emergencyContactName": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "emergencyContactPhone": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "medicalConditions": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "bibNumber": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "waveStart": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
-          },
-          "ageCategory": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "updatedAt": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
-          },
-          "userId": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "eventId": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "event": {
-            "$ref": "#/components/schemas/Event"
-          },
-          "categoryId": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "category": {
-            "$ref": "#/components/schemas/Category"
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Result"
-            }
-          }
-        }
-      },
+      "Enrollment": { },
       "Event": {
         "type": "object",
         "properties": {
@@ -877,6 +1166,14 @@
           }
         }
       },
+      "PaymentRequest": {
+        "type": "object",
+        "properties": {
+          "paymentMethod": {
+            "type": "string"
+          }
+        }
+      },
       "RegisterRequest": {
         "type": "object",
         "properties": {
@@ -991,6 +1288,35 @@
           },
           "enrollment": {
             "$ref": "#/components/schemas/Enrollment"
+          }
+        }
+      },
+      "UpdateProfileRequest": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "phone": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -1173,7 +1499,19 @@
       "name": "Auth"
     },
     {
-      "name": "Event"
+      "name": "Categories"
+    },
+    {
+      "name": "Enrollments"
+    },
+    {
+      "name": "Events"
+    },
+    {
+      "name": "Results"
+    },
+    {
+      "name": "Users"
     },
     {
       "name": "WeatherForecast"
