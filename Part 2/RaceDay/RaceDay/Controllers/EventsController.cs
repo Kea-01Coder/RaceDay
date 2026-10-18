@@ -128,24 +128,32 @@ namespace RaceDay.Controllers
         // POST: api/events
         [HttpPost]
         [Authorize(Roles = "Organiser,Admin")]
-        public async Task<IActionResult> CreateEvent([FromBody] Event newEvent)
+        public async Task<IActionResult> CreateEvent([FromBody] CreateEventRequest req) // <--- Changed here
         {
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (userIdClaim == null)
-                return Unauthorized();
+            if (userIdClaim == null) return Unauthorized();
 
-            var userId = int.Parse(userIdClaim);
-
-            newEvent.CreatedBy = userId;
-            newEvent.CreatedAt = DateTime.UtcNow;
-            newEvent.Status = "upcoming";
+            // Map the DTO to the actual Database Model
+            var newEvent = new Event
+            {
+                Title = req.Title,
+                Description = req.Description,
+                EventDateTime = req.EventDateTime,
+                Location = req.Location,
+                MaxParticipants = req.MaxParticipants,
+                EntryFee = req.EntryFee,
+                EarlyBirdFee = req.EarlyBirdFee,
+                EarlyBirdDate = req.EarlyBirdDate,
+                CreatedBy = int.Parse(userIdClaim),
+                CreatedAt = DateTime.UtcNow,
+                Status = "upcoming" // We set the status here, so the client doesn't have to!
+            };
 
             _context.Events.Add(newEvent);
             await _context.SaveChangesAsync();
 
             return StatusCode(201, new { event_id = newEvent.EventId });
         }
-
         // PUT: api/events/5
         [HttpPut("{id}")]
         [Authorize(Roles = "Organiser,Admin")]
@@ -265,6 +273,18 @@ namespace RaceDay.Controllers
             }
 
             return Ok(new { weather_id = weatherId });
+        }
+
+        public class CreateEventRequest
+        {
+            public string Title { get; set; }
+            public string? Description { get; set; }
+            public DateTime EventDateTime { get; set; }
+            public string Location { get; set; }
+            public int MaxParticipants { get; set; }
+            public decimal EntryFee { get; set; }
+            public decimal? EarlyBirdFee { get; set; }
+            public DateTime? EarlyBirdDate { get; set; }
         }
 
     }
