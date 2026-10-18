@@ -14,11 +14,12 @@ namespace RaceDay.Tests
         private IConfiguration GetMockConfig()
         {
             // Mock configuration for JWT
-            var inMemorySettings = new Dictionary<string, string> {
-                {"Jwt:Key", "THIS_IS_A_VERY_LONG_SECRET_KEY_FOR_TESTING_12345"},
-                {"Jwt:Issuer", "TestIssuer"},
-                {"Jwt:Audience", "TestAudience"}
-            };
+            var inMemorySettings = new Dictionary<string, string?> {
+            {"Jwt:Key", "THIS_IS_A_VERY_LONG_SECRET_KEY_FOR_TESTING_12345"},
+            {"Jwt:Issuer", "TestIssuer"},
+            {"Jwt:Audience", "TestAudience"}
+        };
+        
             return new ConfigurationBuilder().AddInMemoryCollection(inMemorySettings).Build();
         }
 

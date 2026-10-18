@@ -4,6 +4,7 @@ using RaceDay.Controllers;
 using RaceDay.Models;
 using RaceDay.Tests.Helpers;
 using System.Security.Claims;
+using static RaceDay.Controllers.EventsController;
 
 namespace RaceDay.Tests
 {
@@ -32,13 +33,17 @@ namespace RaceDay.Tests
                 var controller = new EventsController(context);
                 SetControllerUser(controller, 1, "Organiser"); // Fake an Organiser
 
-                var newEvent = new Event { Title = "Test Marathon"
-                    , EventDateTime = DateTime.Now,
-                    Location = "Cape Town"
-                };
+            var newEvent = new CreateEventRequest
+            {
+                Title = "Test Marathon",
+                EventDateTime = DateTime.Now,
+                Location = "Cape Town",
+                MaxParticipants = 100, // Add this just in case
+                EntryFee = 50          // Add this just in case
+            };
 
-                // Act
-                var result = await controller.CreateEvent(newEvent);
+            // Act
+            var result = await controller.CreateEvent(newEvent);
 
             // Assert
             var objectResult = Assert.IsType<ObjectResult>(result); // Expect ObjectResult
