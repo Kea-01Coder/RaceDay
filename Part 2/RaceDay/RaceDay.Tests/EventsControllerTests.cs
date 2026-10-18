@@ -38,11 +38,10 @@ namespace RaceDay.Tests
                 Title = "Test Marathon",
                 EventDateTime = DateTime.Now,
                 Location = "Cape Town",
-                MaxParticipants = 100, // Add this just in case
-                EntryFee = 50          // Add this just in case
+                MaxParticipants = 100,
+                EntryFee = 50
             };
 
-            // Act
             var result = await controller.CreateEvent(newEvent);
 
             // Assert
