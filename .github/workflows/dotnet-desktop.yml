@@ -1,0 +1,36 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x' 
+          
+      - name: Restore dependencies
+        run: dotnet restore
+        working-directory: "./Part 2/RaceDay" 
+        
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+        working-directory: "./Part 2/RaceDay"
+        
+      - name: Run Unit Tests
+        run: dotnet test --no-build --configuration Release --verbosity normal
+        working-directory: "./Part 2/RaceDay"
+        
+      - name: Build Success
+        run: echo "Build and tests passed successfully!"
