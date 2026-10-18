@@ -34,16 +34,16 @@ namespace RaceDay.Tests
 
                 var newEvent = new Event { Title = "Test Marathon"
                     , EventDateTime = DateTime.Now,
-                    Location = "Cape Town",
-
+                    Location = "Cape Town"
                 };
 
                 // Act
                 var result = await controller.CreateEvent(newEvent);
 
-                // Assert
-                Assert.IsType<StatusCodeResult>(result);
-                Assert.Single(context.Events);
+            // Assert
+            var objectResult = Assert.IsType<ObjectResult>(result); // Expect ObjectResult
+            Assert.Equal(201, objectResult.StatusCode);             // Check the 201
+            Assert.Single(context.Events);
         }
 
         [Fact]
@@ -76,6 +76,7 @@ namespace RaceDay.Tests
                 var ev = new Event { Title = "Test", 
                     MaxParticipants = 100,
                     Location = "Cape Town",
+                    Status = "pending"
                 };
                 context.Events.Add(ev);
                 await context.SaveChangesAsync();
@@ -95,7 +96,8 @@ namespace RaceDay.Tests
                 var result = await controller.EnrollInEvent(ev.EventId, enrollment);
 
                 // Assert
-                Assert.IsType<StatusCodeResult>(result);
+                var objectResult = Assert.IsType<ObjectResult>(result); // Expect ObjectResult
+                Assert.Equal(201, objectResult.StatusCode);             // Check the 201
                 Assert.Single(context.Enrollments); // Proves enrollment was recorded
         }
      

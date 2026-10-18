@@ -43,9 +43,8 @@ namespace RaceDay.Tests
             var result = await controller.Register(request);
 
             // Assert
-            Assert.IsType<StatusCodeResult>(result);
-            var statusResult = result as StatusCodeResult;
-            Assert.Equal(201, statusResult.StatusCode);
+            var objectResult = Assert.IsType<ObjectResult>(result); // Expect ObjectResult
+            Assert.Equal(201, objectResult.StatusCode);             // Check the 201
             Assert.Single(context.Users); // Check DB has 1 user
         }
 
