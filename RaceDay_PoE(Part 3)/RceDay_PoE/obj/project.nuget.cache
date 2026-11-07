@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HY4aXawDaX0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Student\\source\\repos\\RceDay_PoE\\RceDay_PoE\\RceDay_PoE.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Student\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.24.2-preview.1\\microsoft.visualstudio.azure.containers.tools.targets.1.24.2-preview.1.nupkg.sha512"
+  ],
+  "logs": []
+}
