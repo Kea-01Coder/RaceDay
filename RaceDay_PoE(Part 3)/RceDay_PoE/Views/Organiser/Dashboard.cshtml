@@ -1,5 +1,51 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<RaceDay_PoE.Models.EventDtos>
 @{
+    ViewData["Title"] = "Organiser Dashboard";
 }
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Organiser Dashboard</h2>
+    <a asp-action="CreateEvent" class="btn btn-success">➕ Create New Event</a>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ev in Model)
+                {
+                    <tr>
+                        <td class="fw-bold">@ev.Title</td>
+                        <td>@ev.EventDateTime.ToString("dd MMM yyyy")</td>
+                        <td>@ev.Location</td>
+                        <td>
+                            <span class="badge @(ev.Status == "upcoming" ? "bg-primary" : "bg-secondary")">
+                                @ev.Status
+                            </span>
+                        </td>
+                        <td>
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@ev.EventId" class="btn btn-sm btn-outline-info">View</a>
+                            <!-- These buttons will be wired up in the next steps if you have time -->
+                            <button class="btn btn-sm btn-outline-warning" disabled>Edit</button>
+                            <button class="btn btn-sm btn-outline-danger" disabled>Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

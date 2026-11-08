@@ -53,5 +53,25 @@ namespace RaceDay_PoE.Controllers
             TempData["Error"] = "Could not enrol. You might already be enrolled.";
             return RedirectToAction("Details", "Home", new { id = eventId });
         }
+
+        // GET: /Participant/MyEnrolments
+        public async Task<IActionResult> MyEnrolments()
+        {
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+            var token = User.FindFirst("JWT")?.Value;
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            // Call the API to get the user's enrollments
+            var response = await client.GetAsync("api/enrollments");
+
+            // For now, let's assume it returns a list of enrollments
+            var enrollments = new List<dynamic>();
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+            }
+
+            return View(enrollments);
+        }
     }
 }
