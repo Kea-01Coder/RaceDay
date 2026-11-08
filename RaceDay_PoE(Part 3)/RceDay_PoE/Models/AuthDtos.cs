@@ -32,5 +32,22 @@
 
 
         }
+
+        public class EventDto
+        {
+            public int EventId { get; set; }
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public DateTime EventDateTime { get; set; }
+            public string Location { get; set; }
+            public decimal EntryFee { get; set; }
+            public string Status { get; set; }
+        }
+
+        public class EventListResponse
+        {
+            public List<EventDto> Events { get; set; }
+            public int TotalCount { get; set; }
+        }
     }
 }

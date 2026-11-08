@@ -1,6 +1,55 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@model RaceDay_PoE.Models.EventDtos.EventDetailsResponse
+@{
+    ViewData["Title"] = Model.Event.Title;
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container mt-4">
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <h1 class="display-5 fw-bold">@Model.Event.Title</h1>
+            <p class="lead">📍 @Model.Event.Location | 📅 @Model.Event.EventDateTime.ToString("dd MMM yyyy")</p>
+            <hr />
+            <p>@Model.Event.Description</p>
+        </div>
+    </div>
+
+    <h3 class="mb-3">Available Categories</h3>
+
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Participant"))
+    {
+        <div class="alert alert-info">
+            Select a category below to enrol in this event.
+        </div>
+    }
+    else if (!User.Identity.IsAuthenticated)
+    {
+        <div class="alert alert-warning">
+            Please <a asp-controller="Account" asp-action="Login">log in as a Participant</a> to enrol.
+        </div>
+    }
+
+    <div class="row">
+        @foreach (var cat in Model.Categories)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">@cat.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Distance: @cat.DistanceKM km</h6>
+                        <p class="fw-bold text-success">Fee: R @cat.EntryFee</p>
+
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Participant"))
+                        {
+                            <!-- This form will post to the Enroll POST action -->
+                            <form asp-controller="Participant" asp-action="Enrol" method="post">
+                                <input type="hidden" name="eventId" value="@Model.Event.EventId" />
+                                <input type="hidden" name="categoryId" value="@cat.CategoryId" />
+                                <button type="submit" class="btn btn-primary w-100">Enrol Now</button>
+                            </form>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
