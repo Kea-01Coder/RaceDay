@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RaceDay_PoE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c42f2cb2e2f5c5d8e8edaa3a4342ebf7e07f86d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99951d8829c08f149f460ff8a95d396c9e5bd2b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("RaceDay_PoE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RaceDay_PoE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
