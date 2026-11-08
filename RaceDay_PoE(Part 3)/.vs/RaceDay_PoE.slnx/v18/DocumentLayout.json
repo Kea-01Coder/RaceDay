@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\models\\eventdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -41,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|solutionrelative:rceday_poe\\controllers\\participantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{256FFAE0-4180-CA0A-DB22-8088BC277B40}|RceDay_PoE\\RaceDay_PoE.csproj|c:\\users\\student\\documents\\raceday\\raceday\\raceday_poe(part 3)\\rceday_poe\\views\\organiser\\createevents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,72 +94,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Home\\Details.cshtml",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Views\\Home\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Home\\Details.cshtml",
-              "RelativeToolTip": "RceDay_PoE\\Views\\Home\\Details.cshtml",
-              "ViewState": "AgIAACgAAAAAAAAAAAAYwDcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T13:06:56.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EventDtos.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\EventDtos.cs",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Models\\EventDtos.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\EventDtos.cs",
-              "RelativeToolTip": "RceDay_PoE\\Models\\EventDtos.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
+              "Title": "ParticipantController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\ParticipantController.cs",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\ParticipantController.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\ParticipantController.cs",
+              "RelativeToolTip": "RceDay_PoE\\Controllers\\ParticipantController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T13:05:43.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T19:05:38.8Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "OrganiserController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\OrganiserController.cs",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\OrganiserController.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\OrganiserController.cs",
+              "RelativeToolTip": "RceDay_PoE\\Controllers\\OrganiserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T19:05:07.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\HomeController.cs",
               "RelativeToolTip": "RceDay_PoE\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAADEAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-08T12:22:23.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-08T12:20:46.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AuthDtos.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\AuthDtos.cs",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Models\\AuthDtos.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\AuthDtos.cs",
-              "RelativeToolTip": "RceDay_PoE\\Models\\AuthDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T09:15:56.999Z",
-              "EditorCaption": ""
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Views\\Home\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "RceDay_PoE\\Views\\Home\\Details.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T13:06:56.789Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "RceDay_PoE\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T19:04:25.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Program.cs",
               "RelativeDocumentMoniker": "RceDay_PoE\\Program.cs",
@@ -167,25 +164,47 @@
               "RelativeToolTip": "RceDay_PoE\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T19:06:45.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "RceDay_PoE\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwDAAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T19:04:25.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T19:06:45.664Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Models\\AuthDtos.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\AuthDtos.cs",
+              "RelativeToolTip": "RceDay_PoE\\Models\\AuthDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T09:15:56.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "RceDay_PoE\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-08T12:20:46.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EventDtos.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\EventDtos.cs",
+              "RelativeDocumentMoniker": "RceDay_PoE\\Models\\EventDtos.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Models\\EventDtos.cs",
+              "RelativeToolTip": "RceDay_PoE\\Models\\EventDtos.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T13:05:43.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "RceDay_PoE\\Views\\_ViewStart.cshtml",
@@ -197,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "RceDay_PoE\\Views\\Account\\Register.cshtml",
@@ -209,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "RceDay_PoE\\Views\\Account\\Login.cshtml",
@@ -218,30 +237,6 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAmwCQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-07T18:21:07.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "OrganiserController.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\OrganiserController.cs",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\OrganiserController.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\OrganiserController.cs",
-              "RelativeToolTip": "RceDay_PoE\\Controllers\\OrganiserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T19:05:07.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ParticipantController.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\ParticipantController.cs",
-              "RelativeDocumentMoniker": "RceDay_PoE\\Controllers\\ParticipantController.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\Controllers\\ParticipantController.cs",
-              "RelativeToolTip": "RceDay_PoE\\Controllers\\ParticipantController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T19:05:38.8Z"
             },
             {
               "$type": "Document",

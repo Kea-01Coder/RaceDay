@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Diagnostics;
 using RaceDay_PoE.Models;
 using System.Text.Json;
 
-namespace RaceDayMVC.Controllers
+namespace RaceDay_PoE.Controllers
 {
     public class HomeController : Controller
     {

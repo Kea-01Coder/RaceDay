@@ -1,12 +1,57 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using RaceDay_PoE.Models;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
 
-namespace RceDay_PoE.Controllers
+namespace RaceDay_PoE.Controllers
 {
+    [Authorize(Roles = "Participant")] // Only participants can access this
     public class ParticipantController : Controller
     {
-        public IActionResult Index()
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public ParticipantController(IHttpClientFactory httpClientFactory)
         {
-            return View();
+            _httpClientFactory = httpClientFactory;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Enrol(int eventId, int categoryId)
+        {
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+
+            // Get the JWT token from the cookie
+            var token = User.FindFirst("JWT")?.Value;
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            // Build the JSON body your API expects
+            var payload = new
+            {
+                categoryId = categoryId,
+                participantName = User.Identity.Name, // Using their name from the cookie
+                participantIdNumber = "1234567890", // Placeholder - would come from a form in a real app
+                participantDob = "1990-01-01",
+                gender = "Male",
+                emergencyContactName = "Emergency",
+                emergencyContactPhone = "0821234567",
+                medicalConditions = "None"
+            };
+
+            var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
+
+            // Call your Part 2 API's Enrol endpoint
+            var response = await client.PostAsync($"api/events/{eventId}/enrol", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["Success"] = "Successfully enrolled!";
+                return RedirectToAction("Index", "Home");
+            }
+
+            TempData["Error"] = "Could not enrol. You might already be enrolled.";
+            return RedirectToAction("Details", "Home", new { id = eventId });
         }
     }
 }

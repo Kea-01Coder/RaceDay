@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace RceDay_PoE.Controllers
+namespace RaceDay_PoE.Controllers
 {
     public class OrganiserController : Controller
     {
