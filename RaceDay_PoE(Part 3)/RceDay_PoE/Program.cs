@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient("RaceDayAPI", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7037/");
+    client.BaseAddress = new Uri("http://localhost:7037");
 });
 
 // Setup Cookie Authentication (This is how the website remembers you)
@@ -35,12 +35,9 @@ app.UseRouting();
 app.UseAuthentication(); // This is how the website knows who you are
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
 app.Run();

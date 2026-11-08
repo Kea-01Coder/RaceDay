@@ -73,5 +73,32 @@ namespace RaceDay_PoE.Controllers
 
             return View(enrollments);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadProfilePicture(IFormFile profilePicture)
+        {
+            if (profilePicture == null || profilePicture.Length == 0)
+            {
+                TempData["Error"] = "Please select a file.";
+                return RedirectToAction("Profile");
+            }
+
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+            var token = User.FindFirst("JWT")?.Value;
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            using var form = new MultipartFormDataContent();
+            using var fileStream = profilePicture.OpenReadStream();
+            form.Add(new StreamContent(fileStream), "file", profilePicture.FileName);
+
+            var response = await client.PostAsync("api/users/me/upload-profile-picture", form);
+
+            if (response.IsSuccessStatusCode)
+                TempData["Success"] = "Profile picture updated!";
+            else
+                TempData["Error"] = "Failed to upload picture.";
+
+            return RedirectToAction("Profile");
+        }
     }
 }

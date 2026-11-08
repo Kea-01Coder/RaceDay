@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Azure.Storage.Blobs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RaceDay.Data;
 using System.Security.Claims;
-using Microsoft.EntityFrameworkCore;
 
 namespace RaceDay.Controllers
 {
@@ -14,9 +15,11 @@ namespace RaceDay.Controllers
 
         private readonly RaceDayDbContext _context;
 
-        public UsersController(RaceDayDbContext context)
+        private readonly IConfiguration _config;
+        public UsersController(RaceDayDbContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
         // ============================================
@@ -150,17 +153,44 @@ namespace RaceDay.Controllers
 
             return Ok(results);
         }
-    }
 
-    // ============================================
-    // DTO (Data Transfer Object) for updating profile — only includes editable fields.
-    // Note: role, password hash, and IDs are NOT here — by design.
-    // ============================================
-    public class UpdateProfileRequest
-    {
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-        public string? Email { get; set; }
-        public string? Phone { get; set; }
+        [HttpPost("me/upload-profile-picture")]
+        [Authorize]
+        public async Task<IActionResult> UploadProfilePicture(IFormFile file)
+        {
+            if (file == null || file.Length == 0) return BadRequest("No file uploaded.");
+
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null) return NotFound("User not found.");
+
+            var connectionString = _config.GetConnectionString("AzureBlobStorage");
+            var containerClient = new BlobContainerClient(connectionString, "images");
+
+            // Prefix with "profiles-" to keep them separate from event banners
+            var blobName = $"profiles/{userId}-{Guid.NewGuid()}.jpg";
+            var blobClient = containerClient.GetBlobClient(blobName);
+
+            using var stream = file.OpenReadStream();
+            await blobClient.UploadAsync(stream, overwrite: true);
+
+            // Optional
+            // user.ProfilePictureUrl = blobClient.Uri.ToString();
+            // await _context.SaveChangesAsync();
+
+            return Ok(new { url = blobClient.Uri.ToString() });
+        }
+
+        // ============================================
+        // DTO (Data Transfer Object) for updating profile — only includes editable fields.
+        // Note: role, password hash, and IDs are NOT here — by design.
+        // ============================================
+        public class UpdateProfileRequest
+        {
+            public string? FirstName { get; set; }
+            public string? LastName { get; set; }
+            public string? Email { get; set; }
+            public string? Phone { get; set; }
+        }
     }
 }

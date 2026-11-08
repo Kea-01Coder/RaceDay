@@ -344,3 +344,7 @@ C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net1
 C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10.0\RaceDay.pdb
 C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10.0\RaceDay.genruntimeconfig.cache
 C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\obj\Debug\net10.0\ref\RaceDay.dll
+C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\bin\Debug\net10.0\Apache.Arrow.dll
+C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\bin\Debug\net10.0\Azure.Storage.Blobs.dll
+C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\bin\Debug\net10.0\Azure.Storage.Common.dll
+C:\Users\Student\Documents\RaceDay\RaceDay\Part 2\RaceDay\RaceDay\bin\Debug\net10.0\System.IO.Hashing.dll

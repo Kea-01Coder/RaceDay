@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Azure.Storage.Blobs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RaceDay.Data;
 using RaceDay.Models;
 using System.Security.Claims;
-using Microsoft.EntityFrameworkCore;
 
 namespace RaceDay.Controllers
 {
@@ -13,10 +14,11 @@ namespace RaceDay.Controllers
     public class EventsController : ControllerBase
     {
         private readonly RaceDayDbContext _context;
-
-        public EventsController(RaceDayDbContext context)
+        private readonly IConfiguration _config;
+        public EventsController(RaceDayDbContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
         // ============================================
@@ -273,6 +275,24 @@ namespace RaceDay.Controllers
             }
 
             return Ok(new { weather_id = weatherId });
+        }
+
+        [HttpPost("{id}/upload-image")]
+        [Authorize(Roles = "Organiser,Admin")]
+        public async Task<IActionResult> UploadEventImage(int id, IFormFile file)
+        {
+            if (file == null || file.Length == 0) return BadRequest("No file uploaded.");
+
+            var connectionString = _config.GetConnectionString("AzureBlobStorage");
+            var containerClient = new BlobContainerClient(connectionString, "images");
+
+            var blobName = $"{Guid.NewGuid()}-{file.FileName}";
+            var blobClient = containerClient.GetBlobClient(blobName);
+
+            using var stream = file.OpenReadStream();
+            await blobClient.UploadAsync(stream, overwrite: true);
+
+            return Ok(new { url = blobClient.Uri.ToString() });
         }
 
         public class CreateEventRequest
