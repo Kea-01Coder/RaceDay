@@ -29,5 +29,15 @@ namespace RaceDay_PoE.Models
             public decimal? EarlyBirdFee { get; set; }
             public DateTime? EarlyBirdDate { get; set; }
         }
+
+        public class EnrollmentDto
+        {
+            public int EnrollmentId { get; set; }
+            public string EventTitle { get; set; }
+            public DateTime EventDate { get; set; }
+            public string CategoryName { get; set; }
+            public string Status { get; set; }
+            public string PaymentStatus { get; set; }
+        }
     }
 }
