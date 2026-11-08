@@ -1,7 +1,23 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using RaceDay_PoE.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient("RaceDayAPI", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7037/");
+});
+
+// Setup Cookie Authentication (This is how the website remembers you)
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login"; // Where to go if not logged in
+        options.AccessDeniedPath = "/Account/AccessDenied"; // Where to go if wrong role
+    });
 
 var app = builder.Build();
 
@@ -16,6 +32,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication(); // This is how the website knows who you are
 app.UseAuthorization();
 
 app.MapStaticAssets();

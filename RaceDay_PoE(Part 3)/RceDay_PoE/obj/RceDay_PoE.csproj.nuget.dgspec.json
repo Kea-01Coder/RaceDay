@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\source\\repos\\RceDay_PoE\\RceDay_PoE\\RceDay_PoE.csproj": {}
+    "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\RceDay_PoE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\source\\repos\\RceDay_PoE\\RceDay_PoE\\RceDay_PoE.csproj": {
+    "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\RceDay_PoE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\source\\repos\\RceDay_PoE\\RceDay_PoE\\RceDay_PoE.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\RceDay_PoE.csproj",
         "projectName": "RceDay_PoE",
-        "projectPath": "C:\\Users\\Student\\source\\repos\\RceDay_PoE\\RceDay_PoE\\RceDay_PoE.csproj",
+        "projectPath": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\RceDay_PoE.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\source\\repos\\RceDay_PoE\\RceDay_PoE\\obj\\",
+        "outputPath": "C:\\Users\\Student\\Documents\\RaceDay\\RaceDay\\RaceDay_PoE(Part 3)\\RceDay_PoE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

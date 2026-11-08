@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RceDay_PoE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94597a5cdfe6d85b9f88f28e3f0ff1d4ab32fa41")]
 [assembly: System.Reflection.AssemblyProductAttribute("RceDay_PoE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RceDay_PoE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
