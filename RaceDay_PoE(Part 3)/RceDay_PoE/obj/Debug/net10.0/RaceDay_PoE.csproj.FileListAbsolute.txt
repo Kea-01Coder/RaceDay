@@ -22,7 +22,6 @@ C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\De
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\scopedcss\bundle\RaceDay_PoE.styles.css
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\scopedcss\projectbundle\RaceDay_PoE.bundle.scp.css
-C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\compressed\jk1tdufvz7-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\compressed\p5u54ea3wb-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\compressed\wi8f506hdp-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\compressed\zpo0ynizil-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -98,3 +97,4 @@ C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\De
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\RaceDay_PoE.genruntimeconfig.cache
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\ref\RaceDay_PoE.dll
 C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\RaceDay_.A834AD6B.Up2Date
+C:\Users\Student\Documents\RaceDay\RaceDay\RaceDay_PoE(Part 3)\RceDay_PoE\obj\Debug\net10.0\compressed\jk1tdufvz7-{0}-y1tkdrh2q8-y1tkdrh2q8.gz

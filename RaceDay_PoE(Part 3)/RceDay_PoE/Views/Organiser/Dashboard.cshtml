@@ -1,11 +1,11 @@
-﻿@model List<RaceDay_PoE.Models.EventDtos.EventDto>
+﻿@model List<RaceDay_PoE.Models.Dto.EventDto>
 @{
     ViewData["Title"] = "Organiser Dashboard";
 }
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Organiser Dashboard</h2>
-    <a asp-action="CreateEvent" class="btn btn-success">➕ Create New Event</a>
+    <a asp-action="CreateEvent" class="btn btn-success">Create New Event</a>
 </div>
 
 @if (TempData["Success"] != null)
@@ -39,7 +39,7 @@
                         </td>
                         <td>
                             <a asp-controller="Home" asp-action="Details" asp-route-id="@ev.EventId" class="btn btn-sm btn-outline-info">View</a>
-                            <!-- These buttons will be wired up in the next steps if you have time -->
+                            <a asp-action="ResultsEntry" asp-route-id="@ev.EventId" class="btn btn-sm btn-outline-success">Enter Results</a>
                             <button class="btn btn-sm btn-outline-warning" disabled>Edit</button>
                             <button class="btn btn-sm btn-outline-danger" disabled>Delete</button>
                         </td>

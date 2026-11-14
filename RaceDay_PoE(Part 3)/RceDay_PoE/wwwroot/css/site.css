@@ -1,31 +1,74 @@
+/* Import a sporty Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    /* A very light grey background makes white cards pop */
+    background-color: #f4f7f6;
+    margin-bottom: 60px;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Make the navbar look energetic and bold */
+.navbar {
+    border-bottom: 3px solid #ffc107; /* Bootstrap warning yellow */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
+
+.nav-link {
+    font-weight: 600;
+}
+
+/* Make cards pop with a hover effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
+
+/* Custom styling for headings */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.text-primary {
+    color: #0056b3 !important; /* A strong racing blue */
+}
+
+/* Make buttons look a bit more modern */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+    .btn-primary:hover {
+        background-color: #004494;
+        border-color: #004494;
+    }

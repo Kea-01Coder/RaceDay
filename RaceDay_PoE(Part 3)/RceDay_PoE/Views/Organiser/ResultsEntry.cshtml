@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model RaceDay_PoE.Models.Dto.SubmitResultRequest
 @{
+    ViewData["Title"] = "Enter Race Results";
+    var eventId = ViewBag.EventId;
 }
+
+<div class="container mt-4">
+    <h2>Enter Race Results (Event ID: @eventId)</h2>
+    <p class="text-muted">Input the finish time and position for a participant's enrollment.</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+
+    <div class="card shadow-sm border-0 mt-3">
+        <div class="card-body">
+            <form asp-action="ResultsEntry" asp-route-id="@eventId" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="EnrollmentId" class="form-label">Enrollment ID (from the Enrolments list)</label>
+                    <input asp-for="EnrollmentId" class="form-control" type="number" required />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="FinishTime" class="form-label">Finish Time (HH:MM:SS)</label>
+                        <input asp-for="FinishTime" class="form-control" type="time" step="1" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Position" class="form-label">Position</label>
+                        <input asp-for="Position" class="form-control" type="number" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="OverallRank" class="form-label">Overall Rank</label>
+                        <input asp-for="OverallRank" class="form-control" type="number" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="CategoryRank" class="form-label">Category Rank</label>
+                        <input asp-for="CategoryRank" class="form-control" type="number" required />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit Result</button>
+            </form>
+        </div>
+    </div>
+</div>

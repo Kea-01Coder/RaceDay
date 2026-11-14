@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-using static RaceDay_PoE.Models.AuthDtos;
+using static RaceDay_PoE.Models.Dto;
 
 namespace RaceDay_PoE.Controllers
 {
@@ -100,5 +100,6 @@ namespace RaceDay_PoE.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }
+
     }
 }

@@ -4,6 +4,7 @@ using RaceDay_PoE.Models;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using static RaceDay_PoE.Models.Dto;
 
 namespace RaceDay_PoE.Controllers
 {
@@ -99,6 +100,30 @@ namespace RaceDay_PoE.Controllers
                 TempData["Error"] = "Failed to upload picture.";
 
             return RedirectToAction("Profile");
+        }
+
+        // GET: /Participant/MyResults
+        public async Task<IActionResult> MyResults()
+        {
+            var client = _httpClientFactory.CreateClient("RaceDayAPI");
+
+            var token = User.FindFirst("JWT")?.Value;
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            // Call the API endpoint you built in Part 2
+            var response = await client.GetAsync($"api/users/{userId}/results");
+
+            var results = new List<ResultDto>();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                results = JsonSerializer.Deserialize<List<ResultDto>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<ResultDto>();
+            }
+
+            return View(results);
         }
     }
 }

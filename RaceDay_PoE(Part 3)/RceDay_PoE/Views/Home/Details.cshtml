@@ -1,4 +1,4 @@
-﻿@model RaceDay_PoE.Models.EventDtos.EventDetailsResponse
+﻿@model RaceDay_PoE.Models.Dto.EventDetailsResponse
 @{
     ViewData["Title"] = Model.Event.Title;
 }
@@ -7,7 +7,7 @@
     <div class="card shadow-sm border-0 mb-4">
         <div class="card-body">
             <h1 class="display-5 fw-bold">@Model.Event.Title</h1>
-            <p class="lead">📍 @Model.Event.Location | 📅 @Model.Event.EventDateTime.ToString("dd MMM yyyy")</p>
+            <p class="lead">@Model.Event.Location | @Model.Event.EventDateTime.ToString("dd MMM yyyy")</p>
             <hr />
             <p>@Model.Event.Description</p>
         </div>

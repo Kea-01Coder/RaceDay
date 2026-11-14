@@ -1,5 +1,54 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<RaceDay_PoE.Models.Dto.ResultDto>
 @{
+    ViewData["Title"] = "My Results";
 }
+
+<div class="container mt-4">
+    <h2 class="mb-4">My Race Results</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            You don't have any recorded results yet. Complete a race to see your times here!
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Event</th>
+                            <th>Finish Time</th>
+                            <th>Overall Position</th>
+                            <th>Category Rank</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="fw-bold">@item.EventTitle</td>
+                                <td>@item.FinishTime.ToString("HH:mm:ss")</td>
+                                <td>@item.Position</td>
+                                <td>@item.CategoryRank</td>
+                                <td>
+                                    @if (item.Certified)
+                                    {
+                                        <span class="badge bg-success">Certified</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Pending</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>

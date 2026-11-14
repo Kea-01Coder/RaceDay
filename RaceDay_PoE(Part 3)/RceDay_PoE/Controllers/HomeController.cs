@@ -22,13 +22,13 @@ namespace RaceDay_PoE.Controllers
             // We call the public GET events endpoint
             var response = await client.GetAsync("api/events");
 
-            var events = new List<AuthDtos.EventDto>();
+            var events = new List<Dto.EventDto>();
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
                 // API returns { events: [...], total_count: X }
-                var wrapper = JsonSerializer.Deserialize<AuthDtos.EventListResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-                events = wrapper?.Events ?? new List<AuthDtos.EventDto>();
+                var wrapper = JsonSerializer.Deserialize<Dto.EventListResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                events = wrapper?.Events ?? new List<Dto.EventDto>();
             }
 
             return View(events);
@@ -49,7 +49,7 @@ namespace RaceDay_PoE.Controllers
 
             // API returns { event: {...}, categories: [...], weather: {...} }
             // We need a wrapper class for this. 
-            var wrapper = JsonSerializer.Deserialize<EventDtos.EventDetailsResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            var wrapper = JsonSerializer.Deserialize<Dto.EventDetailsResponse>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return View(wrapper);
         }
