@@ -20,17 +20,28 @@ jobs:
         with:
           dotnet-version: '8.0.x' 
           
-      - name: Restore dependencies
-        run: dotnet restore
-        working-directory: "./Part 2/RaceDay" 
+      # --- PART 2 API ---
+      - name: Restore API
+        run: dotnet restore "./Part 2/RaceDay/RaceDay/RaceDay.csproj"
         
-      - name: Build
-        run: dotnet build --no-restore --configuration Release
-        working-directory: "./Part 2/RaceDay"
+      - name: Build API
+        run: dotnet build "./Part 2/RaceDay/RaceDay/RaceDay.csproj" --no-restore --configuration Release
+        
+      # --- PART 2 TESTS ---
+      - name: Restore Tests
+        run: dotnet restore "./Part 2/RaceDay/RaceDay.Tests/RaceDay.Tests.csproj"
         
       - name: Run Unit Tests
-        run: dotnet test --no-build --configuration Release --verbosity normal
-        working-directory: "./Part 2/RaceDay"
+        run: dotnet test "./Part 2/RaceDay/RaceDay.Tests/RaceDay.Tests.csproj" --no-build --configuration Release --verbosity normal
+        
+      # --- PART 3 MVC ---
+      - name: Restore MVC
+        # Note: I used the exact folder name from your screenshot "RceDay_PoE"
+        run: dotnet restore "./Part 3/RaceDay_PoE(Part 3)/RceDay_PoE/RaceDay_PoE.csproj"
+        
+      - name: Build MVC
+        # Note: I used the exact folder name from your screenshot "RceDay_PoE"
+        run: dotnet build "./Part 3/RaceDay_PoE(Part 3)/RceDay_PoE/RaceDay_PoE.csproj" --no-restore --configuration Release
         
       - name: Build Success
-        run: echo "Build and tests passed successfully!"
+        run: echo "Both Part 2 API and Part 3 MVC built successfully!"
