@@ -22,18 +22,19 @@ namespace RaceDay.Controllers
         // Update an existing category. Organiser only.
         [HttpPut("{id}")]
         [Authorize(Roles = "Organiser,Admin")]
-        public async Task<IActionResult> UpdateCategory(int id, [FromBody] Category updated)
+        public async Task<IActionResult> UpdateCategory(int id, [FromBody] UpdateCategoryRequest req)
         {
             var existing = await _context.Categories.FindAsync(id);
             if (existing == null)
                 return NotFound(new { message = $"Category {id} not found." });
 
-            existing.Name = updated.Name;
-            existing.Description = updated.Description;
-            existing.EntryFee = updated.EntryFee;
-            existing.StartTime = updated.StartTime;
-            existing.DistanceKM = updated.DistanceKM;
-            existing.Capacity = updated.Capacity;
+            // Map the DTO fields
+            existing.Name = req.Name;
+            existing.Description = req.Description;
+            existing.EntryFee = req.EntryFee;
+            existing.StartTime = req.StartTime;
+            existing.DistanceKM = req.DistanceKM;
+            existing.Capacity = req.Capacity;
 
             await _context.SaveChangesAsync();
             return Ok(existing);
@@ -52,6 +53,15 @@ namespace RaceDay.Controllers
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
             return Ok(new { message = "Category deleted." });
+        }
+        public class UpdateCategoryRequest
+        {
+            public string Name { get; set; }
+            public string? Description { get; set; }
+            public decimal EntryFee { get; set; }
+            public TimeOnly? StartTime { get; set; }
+            public decimal DistanceKM { get; set; }
+            public int? Capacity { get; set; }
         }
     }
 }

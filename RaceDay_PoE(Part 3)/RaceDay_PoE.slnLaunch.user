@@ -5,7 +5,7 @@
       {
         "Path": "RceDay_PoE\\RaceDay_PoE.csproj",
         "Action": "Start",
-        "DebugTarget": "Container (Dockerfile)"
+        "DebugTarget": "Start"
       }
     ]
   }

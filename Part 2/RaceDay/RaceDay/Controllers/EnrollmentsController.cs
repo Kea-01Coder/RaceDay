@@ -24,52 +24,7 @@ namespace RaceDay.Controllers
         // A Participant enrols in an event by choosing a category.
         [HttpPost("/api/events/{id}/enrol")]
         [Authorize(Roles = "Participant")]
-        public async Task<IActionResult> EnrollInEvent(int id, [FromBody] Enrollment enrolment)
-        {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
-
-            // Verify event exists
-            var ev = await _context.Events.FindAsync(id);
-            if (ev == null)
-                return NotFound(new { message = $"Event {id} not found." });
-
-            // Verify category exists and belongs to this event
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(c => c.CategoryId == enrolment.CategoryId && c.EventId == id);
-            if (category == null)
-                return BadRequest(new { message = "Invalid category for this event." });
-
-            // Check the event isn't full
-            var currentCount = await _context.Enrollments.CountAsync(en => en.EventId == id);
-            if (currentCount >= ev.MaxParticipants)
-                return BadRequest(new { message = "Event is full." });
-
-            // Set server-controlled fields
-            enrolment.UserId = userId;
-            enrolment.EventId = id;
-            enrolment.Status = "pending";
-            enrolment.PaymentStatus = "pending";
-            enrolment.EntryDate = DateTime.UtcNow;
-            enrolment.AmountPaid = category.EntryFee;
-
-            _context.Enrollments.Add(enrolment);
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                // This fires if the unique index UC_Enrollment is violated
-                return BadRequest(new { message = "You're already enrolled in this category for this event." });
-            }
-
-            return StatusCode(201, new
-            {
-                enrolment_id = enrolment.EnrollmentId,
-                amount_due = category.EntryFee
-            });
-        }
+        
 
         // GET: api/enrollments/{id}
         // Get a specific enrolment. Self (the enrolled user) or Admin only.
@@ -92,6 +47,61 @@ namespace RaceDay.Controllers
                 return Forbid();
 
             return Ok(enrolment);
+        }
+
+        // Change the parameter to EnrollRequest
+
+        [HttpPost]
+        [Authorize(Roles = "Participant")]
+        public async Task<IActionResult> EnrollInEvent(int id, [FromBody] EnrollRequest req)
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
+            var ev = await _context.Events.FindAsync(id);
+            if (ev == null) return NotFound(new { message = $"Event {id} not found." });
+
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(c => c.CategoryId == req.CategoryId && c.EventId == id);
+            if (category == null) return BadRequest(new { message = "Invalid category for this event." });
+
+            var currentCount = await _context.Enrollments.CountAsync(en => en.EventId == id);
+            if (currentCount >= ev.MaxParticipants) return BadRequest(new { message = "Event is full." });
+
+            // Map the DTO to the actual Enrollment model
+            var enrolment = new Enrollment
+            {
+                UserId = userId,
+                EventId = id,
+                CategoryId = req.CategoryId,
+                ParticipantName = req.ParticipantName,
+                ParticipantIdNumber = req.ParticipantIdNumber,
+                ParticipantDob = req.ParticipantDob,
+                Gender = req.Gender,
+                EmergencyContactName = req.EmergencyContactName,
+                EmergencyContactPhone = req.EmergencyContactPhone,
+                MedicalConditions = req.MedicalConditions,
+                Status = "pending",
+                PaymentStatus = "pending",
+                EntryDate = DateTime.UtcNow,
+                AmountPaid = category.EntryFee
+            };
+
+            _context.Enrollments.Add(enrolment);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                return BadRequest(new { message = "You're already enrolled in this category for this event." });
+            }
+
+            return StatusCode(201, new
+            {
+                enrolment_id = enrolment.EnrollmentId,
+                amount_due = category.EntryFee
+            });
         }
 
         // PUT: api/enrollments/{id}
@@ -200,5 +210,16 @@ namespace RaceDay.Controllers
     {
         public string PaymentMethod { get; set; }
     }
+        public class EnrollRequest
+        {
+            public int CategoryId { get; set; }
+            public string ParticipantName { get; set; }
+            public string ParticipantIdNumber { get; set; }
+            public DateOnly? ParticipantDob { get; set; }
+            public string? Gender { get; set; }
+            public string? EmergencyContactName { get; set; }
+            public string? EmergencyContactPhone { get; set; }
+            public string? MedicalConditions { get; set; }
+        }
 }
 

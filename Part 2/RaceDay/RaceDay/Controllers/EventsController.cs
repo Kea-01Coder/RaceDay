@@ -60,7 +60,20 @@ namespace RaceDay.Controllers
                 .OrderByDescending(w => w.ForecastDate)
                 .FirstOrDefaultAsync();
 
-            return Ok(new { @event = ev, categories = ev.Categories, weather });
+            return Ok(new
+            {
+                @event = ev,
+                categories = ev.Categories.Select(c => new
+                {
+                    c.CategoryId,
+                    c.Name,
+                    c.EntryFee,
+                    c.DistanceKM,
+                    c.Capacity,
+                    c.StartTime
+                }),
+                weather
+            });
         }
 
         // GET: api/events/5/participants
