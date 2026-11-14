@@ -30,11 +30,11 @@ jobs:
       # --- PART 3 MVC ---
       - name: Restore MVC
         # Note: I used the exact folder name from your screenshot "RceDay_PoE"
-        run: dotnet restore "./Part 3/RaceDay_PoE(Part 3)/RceDay_PoE/RaceDay_PoE.csproj"
+        run: dotnet restore "./RaceDay_PoE(Part 3)/RceDay_PoE/RaceDay_PoE.csproj"
         
       - name: Build MVC
         # Note: I used the exact folder name from your screenshot "RceDay_PoE"
-        run: dotnet build "./Part 3/RaceDay_PoE(Part 3)/RceDay_PoE/RaceDay_PoE.csproj" --no-restore --configuration Release
+        run: dotnet build "./RaceDay_PoE(Part 3)/RceDay_PoE/RaceDay_PoE.csproj" --no-restore --configuration Release
         
       - name: Build Success
         run: echo "Both Part 2 API and Part 3 MVC built successfully!"
