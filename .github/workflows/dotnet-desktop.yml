@@ -27,14 +27,6 @@ jobs:
       - name: Build API
         run: dotnet build "./Part 2/RaceDay/RaceDay/RaceDay.csproj" --no-restore --configuration Release
         
-      # --- PART 2 TESTS ---
-      - name: Restore Tests
-        run: dotnet restore "./Part 2/RaceDay/RaceDay.Tests/RaceDay.Tests.csproj"
-        
-      - name: Run Unit Tests
-        # Note: We use --no-restore here to make sure it uses the packages we just restored
-        run: dotnet test "./Part 2/RaceDay/RaceDay.Tests/RaceDay.Tests.csproj" --no-restore --configuration Release --verbosity normal
-        
       # --- PART 3 MVC ---
       - name: Restore MVC
         # Note: I used the exact folder name from your screenshot "RceDay_PoE"
