@@ -8,8 +8,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient("RaceDayAPI", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5037/");
+    var baseUrl = builder.Configuration["ApiSettings:BaseUrl"] ?? "http://localhost:5037/";
+    client.BaseAddress = new Uri(baseUrl);
 });
+
 
 // Setup Cookie Authentication (This is how the website remembers you)
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

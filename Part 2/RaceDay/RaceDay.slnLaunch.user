@@ -6,11 +6,6 @@
         "Path": "RaceDay\\RaceDay.csproj",
         "Action": "Start",
         "DebugTarget": "http"
-      },
-      {
-        "Path": "..\\..\\RaceDay_PoE(Part 3)\\RceDay_PoE\\RaceDay_PoE.csproj",
-        "Action": "Start",
-        "DebugTarget": "http"
       }
     ]
   }
