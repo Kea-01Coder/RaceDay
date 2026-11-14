@@ -48,6 +48,7 @@ namespace RaceDay_PoE.Controllers
                 {
                     new Claim(ClaimTypes.Name, result.User.FirstName),
                     new Claim(ClaimTypes.Role, result.User.Role),
+                    new Claim(ClaimTypes.NameIdentifier, result.User.UserID.ToString()),
                     new Claim("JWT", result.Token) // We store the actual JWT here to use later!
                 };
 

@@ -31,12 +31,5 @@
       "useSSL": true
     }
   },
-   {
-    "Logging": { "..." },
-    "AllowedHosts": "*",
-    "ApiSettings": {
-      "BaseUrl": "http://localhost:5037/"
-    }
-  },
   "$schema": "https://json.schemastore.org/launchsettings.json"
 }

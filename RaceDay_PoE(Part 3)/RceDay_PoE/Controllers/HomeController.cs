@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
 using RaceDay_PoE.Models;
 using System.Text.Json;
+using static RaceDay_PoE.Models.Dto;
 
 namespace RaceDay_PoE.Controllers
 {

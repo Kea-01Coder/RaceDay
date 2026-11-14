@@ -193,7 +193,7 @@ Step 4: Enrol
         Click Execute.
         "The API returns a 201 Created, showing my Enrollment ID and the amount due."
 
-Step 5: Prove the role restriction (The "Aha!" moment for your video)
+Step 5: Prove the role restriction 
         Without logging out, scroll up to POST /api/events (Create Event).
         Click Try it out and Execute (with any dummy data).
         "Notice I get a 403 Forbidden. Because my token says I am a 'Participant', the [Authorize(Roles = "Organiser,Admin")] attribute blocks me from creating an event. Role-based access is working."
@@ -204,3 +204,28 @@ Step 6: Pay (Optional, but shows the flow)
         Body: { "paymentMethod": "card" }
         Execute.
         "The payment is processed (simulated), and my status is updated to 'confirmed'."
+
+# RaceDay - Full Stack Application (PROG6212 POE)
+
+This repository contains the complete solution for the RaceDay platform, divided into two main parts:
+*   **Part 2:** A RESTful API built with ASP.NET Core Web API, Entity Framework Core, and SQL Server.
+*   **Part 3:** An ASP.NET Core MVC web application that consumes the API.
+
+## Features
+*   **Role-Based Access Control:** JWT Authentication with distinct Organiser and Participant roles.
+*   **Event Management:** Organisers can create events, manage categories, and view enrolments.
+*   **Participant Enrolment:** Participants can browse events, enrol in specific categories, and view their history.
+*   **Azure Blob Storage:** Secure image uploading for event banners and participant profile pictures.
+*   **Dockerized:** The MVC application is containerized and communicates with the local API.
+*   **CI/CD:** Automated builds and unit tests via GitHub Actions.
+
+---
+
+## Setup & Run Instructions
+
+### Prerequisites
+*   [.NET 8.0 SDK (or higher)](https://dotnet.microsoft.com/download)
+*   [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (or SQL Server Express/LocalDB)
+*   [Docker Desktop](https://www.docker.com/products/docker-desktop/) (For Part 3)
+*   [Azure Account](https://azure.microsoft.com/) (For Blob Storage)
+

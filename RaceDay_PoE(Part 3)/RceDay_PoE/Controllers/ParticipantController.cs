@@ -60,16 +60,30 @@ namespace RaceDay_PoE.Controllers
         {
             var client = _httpClientFactory.CreateClient("RaceDayAPI");
             var token = User.FindFirst("JWT")?.Value;
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            if (token != null)
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
 
             // Call the API to get the user's enrollments
-            var response = await client.GetAsync("api/enrollments");
+            var response = await client.GetAsync($"api/users/{userId}/enrollments");
 
-            // For now, let's assume it returns a list of enrollments
-            var enrollments = new List<dynamic>();
+            var enrollments = new List<EnrollmentDto>(); // Use your actual DTO type here
+
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
+                // Deserialize the JSON into the list!
+                enrollments = JsonSerializer.Deserialize<List<EnrollmentDto>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<EnrollmentDto>();
+            }
+            else
+            {
+                // If the API fails, let's see the error so we can debug it
+                var error = await response.Content.ReadAsStringAsync();
+                return Content($"API Error {response.StatusCode}: {error}");
             }
 
             return View(enrollments);
